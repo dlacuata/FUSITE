@@ -1,6 +1,7 @@
 import { Livvic } from "next/font/google";
 import { Inter } from "next/font/google";
 import CardComponent from "./card";
+import Testimonial from "./testimonial";
 const livvic = Livvic({
   weight: ["700"],
   subsets: ["latin"],
@@ -64,6 +65,55 @@ export default function Home() {
                         throughout the week with your intern class."
           />
 
+        </div>
+      </div>
+      <div className="flex flex-col items-center 
+                      lg:py-[160px] md:py-[40px] py-[20px]
+                      lg:px-[354x] md:px-[32px] px-[16px]
+                      lg:h-[1402px] md:h-[932px] h-[512]">
+        <div className="flex flex-col items-center
+                        lg:w-[1166px] md:w-[704px] w-[343px]
+                        lg:h-[1198px] md:h-[771px] h-[466px]
+                        lg:gap-[40px] md:gap-[36px] gap-[22px]">
+          <div className={livvic.className}>
+            <div className="h-[45px] md:text-3xl text-xl">Why Intern for FUSION?</div>
+          </div>
+          <div className="hidden sm:flex flex-col lg:gap-[40px] md:gap-[36px] gap-[22px]">
+            <Testimonial
+              name="Lorem Ipsum"
+              internClass="Internship Class"
+              description="“Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris
+                            nisi.“"
+            />
+            <Testimonial
+              name="Lorem Ipsum"
+              internClass="Internship Class"
+              description="“Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris
+                            nisi.“"
+            direction="row-reverse"
+            />
+            <Testimonial
+              name="Lorem Ipsum"
+              internClass="Internship Class"
+              description="“Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris
+                            nisi.“"
+            />
+          </div>
         </div>
       </div>
     </div>

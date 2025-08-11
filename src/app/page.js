@@ -23,7 +23,7 @@ export default function Home() {
           <div className="h-[45px] md:text-3xl text-xl">Intern with FUSION!</div>
         </div>
         <div className={inter.className}>
-          <div className="h-[160px] xl:text-xl text-base text-intern md:mt-4 text-center">
+          <div className="h-[160px] xl:text-[1.5rem] text-base text-intern md:mt-4 text-center">
             Our 10-week internship program enables interns to shadow three board positions of their 
             choice. The first six weeks involve rotating through these roles, followed by a focus on one 
             preferred position during the final four weeks, culminating in an intern-led general meeting in 

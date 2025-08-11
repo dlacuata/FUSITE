@@ -1,4 +1,4 @@
-import { Image, Card, Stack, Text, Heading, Button, CardFooter, CardBody } from '@chakra-ui/react';
+import { Image, Card, Stack, Text, CardFooter, CardBody } from '@chakra-ui/react';
 import { Inter } from "next/font/google";
 
 const inter = Inter({

@@ -2,6 +2,8 @@ import { Livvic } from "next/font/google";
 import { Inter } from "next/font/google";
 import CardComponent from "./card";
 import Testimonial from "./testimonial";
+import Carousel from "./carousel.js"
+
 const livvic = Livvic({
   weight: ["700"],
   subsets: ["latin"],
@@ -114,6 +116,7 @@ export default function Home() {
                             nisi.“"
             />
           </div>
+          <div className="sm:hidden flex"><Carousel/></div>
         </div>
       </div>
     </div>

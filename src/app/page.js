@@ -4,13 +4,13 @@ export default function Home() {
   return (
     <div>
       <div
-        className="w-full max-w-[1440px] mx-auto
+        className="w-full mx-auto
                   min-h-[737px] md:min-h-[514px] lg:min-h-[602px]
                   pt-[64px] md:pt-[100px] lg:pt-[160px]
                   pr-[20px] md:pr-[32px] lg:pr-[354px]
                   pb-[64px] md:pb-[100px] lg:pb-[160px]
                   pl-[20px] md:pl-[32px] lg:pl-[354px]
-                bg-white flex justify-center"
+                bg-white flex justify-center gap-[10px]"
       >
         <div
           className="flex flex-col
@@ -38,11 +38,68 @@ export default function Home() {
         </div>
       </div>
 
-      <div>first info box</div>
+      <div className="w-full min-h-[820px] pt-[64px] px-[20px] pb-[64px] bg-white flex gap-[40px] flex-col-reverse items-center justify-center 
+      md:min-h-[643px] md:pt-[100px] md:pr-[32px] md:pl-[32px] md:pb-[100px] md:flex-row 
+      lg:min-h-[635px] lg:pt-[160px] lg:pr-[138px] lg:pl-[138px] lg:pb-[160px] lg:gap-[60px] lg:flex-row">
+
+        <div className="flex flex-col text-left gap-[19px] w-full max-w-[335px] md:w-[332px] lg:w-[587px]">
+          <h1 className="text-black font-livvic font-bold text-4xl leading-none tracking-normal 
+          w-full max-w-[335px]
+          h-[135px]">
+            A Hub Where Engineering and Technology Grows
+          </h1>
+
+          <p className="text-gray-600 font-inter font-normal text-base leading-8 
+          w-full max-w-[335px] h-fit max-h-[]
+          md:w-[332px] md:h[352px]
+          lg:w-[587] lg:h[192px]">
+            From full-fledged projects, like the FUSION Engineering Project (FEP) and the FUSION ICS Project (FIP), to workshops and networking events to hone in on skills, FUSION always promotes the professional development of its members. With our various opportunities, we provide a platform where ideas flourish and solutions are born. Join us to help shape the future of STEM and become strong innovators in our field.
+          </p>
+          <button className=" w-[130px] h-[40px] self-center md:self-start font-medium bg-[#1447E6] pt-2.5 pr-4 pb-2.5 pl-4 gap-1.5 rounded-xl text-center text-white">Learn More &gt; </button>
+        </div>
+        <div className="bg-[#D9D9D9] flex-shrink-0 w-full max-w-[335pc] h-[209px] md:w-[332px] md:h-[565px] xl:w-[517px] xl:h-[360px]"></div>{/* placeholder for a picture */}
+      </div>
 
       <div>second info box</div>
 
-      <div> third info box</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <div className="w-full min-h-[820px] pt-[64px] px-[20px] pb-[64px] bg-white flex gap-[40px] flex-col-reverse items-center justify-center 
+      md:min-h-[643px] md:pt-[100px] md:pr-[32px] md:pl-[32px] md:pb-[100px] md:flex-row 
+      lg:min-h-[635px] lg:pt-[160px] lg:pr-[138px] lg:pl-[138px] lg:pb-[160px] lg:gap-[60px] lg:flex-row">
+
+        <div className="flex flex-col text-left gap-[19px] w-full max-w-[335px] md:w-[332px] lg:w-[587px]">
+          <h1 className="text-black font-livvic font-bold text-4xl leading-none tracking-normal 
+          w-full max-w-[335px]
+          h-[135px]">
+            Holding the Future of Innovation in Our Hands
+          </h1>
+
+          <p className="text-gray-600 font-inter font-normal text-base leading-8 
+          w-full max-w-[335px] h-fit max-h-[]
+          md:w-[332px] md:h[352px]
+          lg:w-[587] lg:h[192px]">
+            FUSION continuously fosters a vast platform for members to grow in their own initiatives. We offer nine different programs, from mentorship to internship, allowing members to gain immensely diverse experience all in one place. Utilizing and honoring all five of our pillars, FUSION ensures that all members are able to continuously build on their academic, professional, and even social developments. 
+          </p>
+          <button className=" w-[130px] h-[40px] self-center md:self-start font-medium bg-[#1447E6] pt-2.5 pr-4 pb-2.5 pl-4 gap-1.5 rounded-xl text-center text-white">Learn More &gt; </button>
+        </div>
+        <div className="bg-[#D9D9D9] flex-shrink-0 w-full max-w-[335pc] h-[209px] md:w-[332px] md:h-[565px] xl:w-[517px] xl:h-[360px]"></div>{/* placeholder for a picture */}
+      </div>
+
+      
     </div>
   );
 }

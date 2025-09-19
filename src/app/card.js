@@ -14,12 +14,13 @@ const inter = Inter({
 
 export default function CardComponent({ imageSrc = "/placeholder.png", heading, description }) {
     return (
-        <Card variant={{md: 'filled', base: 'unstyled'}}>
+        <Card bg={{base: "transparent", md: "white"}} variant={{md: 'elevated', base: 'unstyled'}}>
             <CardBody>
-                <div className='flex md:flex-col flex-row-reverse items-center text-center
+                <div className='flex md:flex-col flex-row items-center text-center
                       lg:h-[467px] md:h-[449px] h-[128px]
-                      lg:pt-[71px] md:pt-[63px]'>
-                    <div className='flex sm:p-[0px] p-[22px] h-[128px] sm:bg-transparent bg-(--color-card) rounded-tl-2xl'>
+                      lg:pt-[71px] md:pt-[63px]
+                      '>
+                    <div className='flex sm:p-[0px] p-[22px] h-[128px] bg-white rounded-tl-2xl'>
                         <Image
                             src={imageSrc}
                             alt="Board Meeting"
@@ -33,9 +34,9 @@ export default function CardComponent({ imageSrc = "/placeholder.png", heading, 
                     
                     <div className='flex-col'>
                         <div className={`${livvic.className} flex md:h-[80px] h-[22px] items-center sm:justify-center
-                                        md:text-4xl text-base`}> {heading} </div>
-                        <div className={`${inter.className} flex text-intern md:text-base text-sm text-left
-                                        lg:w-[259px] md:w-[173px] w-[192px]`}>
+                                        md:text-4xl text-base indent-2 sm:indent-0`}> {heading} </div>
+                        <div className={`${inter.className} flex text-intern md:text-base text-sm md:leading-6 sm:text-center
+                                        lg:w-[259px] md:w-[173px] w-[192px] sm:ml-0 ml-2 text-left`}>
                             {description}
                         </div>
                     </div>

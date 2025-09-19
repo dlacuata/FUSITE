@@ -29,7 +29,7 @@ export default function Home() {
         <div className="w-25 h-1 bg-amber-500 sm:my-4 my-1"></div>
 
         <div className={inter.className}>
-          <div className="h-[160px] xl:text-[1.5rem] text-base text-intern text-center md:w-[700px] sm:w-[400px] w-[335px]">
+          <div className="h-[160px] xl:text-xl text-base text-intern text-center md:w-[700px] sm:w-[400px] w-[335px]">
             Our 10-week internship program enables interns to shadow three board positions of their 
             choice. The first six weeks involve rotating through these roles, followed by a focus on one 
             preferred position during the final four weeks, culminating in an intern-led general meeting in 
@@ -54,19 +54,21 @@ export default function Home() {
         <div className={karla.className}>
           <div className="md:text-3xl text-xl">INTERN DUTIES</div>
         </div>
-        <div className="w-25 h-1 mb-[5px] bg-amber-500"></div>
+        <div className="w-25 h-1 my-[5px] bg-amber-500"></div>
         <div className="flex items-center 
                       md:flex-row flex-col
                       lg:gap-[34px] md:gap-[30x] gap-[26px]     
                       lg:w-[1010px] md:w-[704px] w-[343px]">
           {/* put somethin in the imageSrc prop for the card components to add an image*/}
           <CardComponent
+            imageSrc="/gear.png"
             heading="Support"
             description="Attend all general meetings and
                         board meetings, and generally be
                         an active member in the community."
           />
           <CardComponent
+            imageSrc="/gearsun.png"
             heading="Innovate"
             description="Create and host an event based 
                         on your chosen board
@@ -74,6 +76,7 @@ export default function Home() {
                         three weeks of the program."
           />
           <CardComponent
+            imageSrc="/sun.png"
             heading="Organize"
             description="Plan intern week, organizing
                         a general meeting and programs

@@ -9,30 +9,43 @@ const inter = Inter({
 export default function Testimonial({ imageSrc = "/placeholder.png", name, internClass, description, direction="row" }){
     return (
         <Card
+            variant={'unstyled'}
             direction={{ base: 'hidden', sm: `${direction}` }}
             overflow='hidden'
-            height={{base:"205px", lg:"314px"}}
+            bg={"transparent"}
+            className='relative h-[300px] lg:h-[36vh]'
         >
-        <Image
-            objectFit='cover'
-            w={{ base: '100%'}}
-            src={imageSrc}
-            alt="Testimonial Photo"
-        />
+        <div className='flex items-center justify-center'>
+            <div className="w-[205px] h-[205px] lg:w-[314px] lg:h-[314px] flex-shrink-0 bg-black">
+                <Image
+                    src={imageSrc}
+                    alt="Testimonial Photo"
+                    width={{lg: 314, base: 205}}
+                    height={{lg: 314, base: 205}}
+                    className="object-cover"
+                />
+            </div>
+        </div>
 
-        <Stack className='bg-(--color-card)'>
+        <div className='w-40'/>
+        <Stack className={`relative bg-[#F3F4F6] lg:py-[24px] lg:px-[40px] 
+                                        py-[12px] px-[20px]
+                                        ${ direction==='row' ? "rounded-r-4xl rounded-bl-4xl" : "rounded-l-4xl rounded-br-4xl" }
+                                        `} >
+            <Image src="/quotes.png" alt="Quote Icon" width={{base: 30, lg: 70}}/>
             <CardBody>
-                <Text fontSize={{lg:'2xl', base:'md'}} py='2' className={inter.className}>
+                <Text py={{lg: '2'}} className={`text-base lg:text-[2vh] xl:leading-[4vh] leading-6 ${inter.className}`}>
                     {description}
                 </Text>
             </CardBody>
 
-            <CardFooter className={inter.className}>
+            <CardFooter className={`absolute right-5 bottom-2 lg:text-[2vh] text-sm ${inter.className}`}
+                        >
                 <Text>
-                   - {name} 
+                   {name} -
                 </Text>
-                <Text as="i">
-                    , {internClass}
+                <Text as="i" color="#FFB900">
+                    &nbsp; {internClass}
                 </Text>
             </CardFooter>
         </Stack>

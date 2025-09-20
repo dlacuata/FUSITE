@@ -16,11 +16,11 @@ export default function CardComponent({ imageSrc = "/placeholder.png", heading, 
     return (
         <Card bg={{base: "transparent", md: "white"}} variant={{md: 'elevated', base: 'unstyled'}}>
             <CardBody>
-                <div className='flex md:flex-col flex-row items-center text-center
-                      lg:h-[440px] md:h-[400px] h-[128px]
-                      lg:pt-[71px] md:pt-[63px]
+                <div className='flex md:flex-col flex-row md:items-center text-center
+                      lg:h-[50vh] md:h-[400px] h-[128px]
+                      lg:pt-[40px] md:pt-[40px]
                       '>
-                    <div className='flex h-[128px] bg-white rounded-tl-2xl'>
+                    <div className='flex h-[15vh] bg-white rounded-tl-2xl'>
                         <Image
                             src={imageSrc}
                             alt="Board Meeting"
@@ -32,11 +32,12 @@ export default function CardComponent({ imageSrc = "/placeholder.png", heading, 
                         />
                     </div>
                     
-                    <div className='flex-col'>
+                    <div className='relative'>
                         <div className={`${livvic.className} flex md:h-[80px] h-[22px] items-center sm:justify-center
-                                        md:text-4xl text-base indent-2 sm:indent-0`}> {heading} </div>
-                        <div className={`${inter.className} flex text-intern lg:text-base text-sm md:leading-6 sm:text-center
-                                        lg:w-[259px] md:w-[173px] w-[192px] sm:ml-0 ml-2 text-left`}>
+                                        md:text-[4vh] text-base indent-2 sm:indent-0`}> {heading} </div>
+                        <div className={`${inter.className} flex text-intern lg:text-[2vh] text-sm  sm:text-center
+                                        lg:mt-[2vh] lg:leading-[3.5vh] leading-5
+                                        lg:w-[18vw] md:w-[173px] w-[192px] sm:ml-0 ml-2 text-left`}>
                             {description}
                         </div>
                     </div>

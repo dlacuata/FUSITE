@@ -1,0 +1,179 @@
+/* Study Hours Page Styles */
+
+/* Reset everything for full screen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mobile styles (base) */
+.study-hours-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f9fafb;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.study-hours-header {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+  .programs-subtitle {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-family: var(--font-karla), sans-serif;
+    font-weight: 600;
+    letter-spacing: 2.16px;
+    color: #99A1AF;
+    text-align: center;
+    z-index: 20;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    white-space: nowrap;
+}
+
+.study-hours-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px; /* Mobile: 40px */
+  font-family: var(--font-karla), sans-serif;
+  line-height: 1;
+  font-weight: 800; 
+  color: white;
+  text-align: center;
+  z-index: 10;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  white-space: normal; /* Prevents text from wrapping to multiple lines */
+}
+
+.study-hours-image-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.study-hours-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.study-hours-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111928;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+@media (min-width: 365px) {
+    .programs-subtitle {
+        text-transform: uppercase;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .study-hours-container {
+    padding: 0;
+  }
+
+  .study-hours-header {
+    padding: 0;
+    margin: 0;
+  }
+
+  .programs-subtitle {
+    font-size: 24px; /* Tablet: 24px */
+    text-transform: uppercase;
+  }
+
+  .study-hours-title {
+    font-size: 90px; /* Tablet: 90px */
+    white-space: nowrap; /* Prevents text from wrapping to multiple lines */
+  }
+
+  .study-hours-image-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .study-hours-image {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .study-hours-container {
+    padding: 0;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .study-hours-header {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .programs-subtitle {
+    font-size: 32px; /* Desktop: 32px */
+    white-space: nowrap;
+    letter-spacing: 3.84px;
+    text-transform: none;
+  }
+
+  .study-hours-title {
+    font-size: 128px; /* Desktop: 128px */
+    white-space: nowrap; /* Prevents text from wrapping to multiple lines */
+  }
+
+  .study-hours-image-container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .study-hours-image {
+    width: 100%;
+    max-width: none;
+    height: 792px;
+    object-fit: cover;
+    object-position: center;
+  }
+}

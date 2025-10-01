@@ -8,17 +8,17 @@
 }
 
 html, body {
-  margin: 0;
+  margin: 0; 
   padding: 0;
   width: 100%;
   height: 100%;
 }
 
-/* Mobile styles (base) */
+/* Base styles - apply to all screen sizes */
 .study-hours-container {
   min-height: 100vh;
   width: 100%;
-  background-color: #f9fafb;
+  background-color: #ffff;
   padding: 0;
   margin: 0;
   position: relative;
@@ -33,21 +33,21 @@ html, body {
   width: 100%;
 }
 
-  .programs-subtitle {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
-    font-family: var(--font-karla), sans-serif;
-    font-weight: 600;
-    letter-spacing: 2.16px;
-    color: #99A1AF;
-    text-align: center;
-    z-index: 20;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    white-space: nowrap;
+.programs-subtitle {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-family: var(--font-karla), sans-serif;
+  font-weight: 600;
+  letter-spacing: 2.16px;
+  color: #99A1AF;
+  text-align: center;
+  z-index: 20;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
 }
 
 .study-hours-title {
@@ -55,16 +55,16 @@ html, body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 40px; /* Mobile: 40px */
+  font-size: 40px;
   font-family: var(--font-karla), sans-serif;
   line-height: 1;
-  font-weight: 800; 
+  font-weight: 800;
   color: white;
   text-align: center;
   z-index: 10;
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  white-space: normal; /* Prevents text from wrapping to multiple lines */
+  white-space: normal;
 }
 
 .study-hours-image-container {
@@ -95,85 +95,391 @@ html, body {
   pointer-events: none;
 }
 
-@media (min-width: 365px) {
-    .programs-subtitle {
-        text-transform: uppercase;
-    }
+
+.study-hours-description {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  position: relative;
 }
 
-/* Tablet styles */
-@media (min-width: 768px) {
-  .study-hours-container {
-    padding: 0;
-  }
+.study-hours-description-title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-karla), sans-serif;
+  font-weight: 700;
+  color: #111928;
+  text-align: center;
+  z-index: 10;
+}
 
-  .study-hours-header {
-    padding: 0;
-    margin: 0;
-  }
+.study-hours-description-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background-color: #FDC700;
+}
 
+.study-hours-description-title::after {
+  content: "Learning";
+  color: #111928; /* Same color as the rest of the text for mobile/tablet */
+}
+
+.study-hours-description-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-inter), sans-serif;
+  max-width: 732px;
+  width: 100%;
+  font-weight: 400;
+  color: #3C3C3C;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  z-index: 10;
+}
+
+/* Carousel Styles */
+.study-hours-carousel {
+  width: 100%;
+  background-color: #fff;
+  transform: translateY(-50px);
+}
+
+.carousel-container {
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 364px;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  z-index: 10;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: #ddd;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+.dot:hover {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+/* Carousel arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-arrow-left {
+  left: 20px;
+}
+
+.carousel-arrow-right {
+  right: 20px;
+}
+
+.arrow-shape {
+  position: relative;
+  width: 18.667px;
+  height: 10.5px;
+}
+
+.arrow-left::before,
+.arrow-left::after {
+  content: '';
+  position: absolute;
+  background-color: #ffffff;
+  width: 2px;
+  height: 12px;
+}
+
+.arrow-left::before {
+  top: 2px;
+  left: 10px;
+  transform: rotate(45deg);
+  transform-origin: bottom center;
+}
+
+.arrow-left::after {
+  top: 10px;
+  left: 10px;
+  transform: rotate(-45deg);
+  transform-origin: top center;
+}
+
+.arrow-right::before,
+.arrow-right::after {
+  content: '';
+  position: absolute;
+  background-color: #ffffff;
+  width: 2px;
+  height: 12px;
+}
+
+.arrow-right::before {
+  top: 2px;
+  left: 8px;
+  transform: rotate(-45deg);
+  transform-origin: bottom center;
+}
+
+.arrow-right::after {
+  top: 10px;
+  left: 8px;
+  transform: rotate(45deg);
+  transform-origin: top center;
+}
+
+
+/* Mobile-specific styles */
+@media (min-width: 365px) {
   .programs-subtitle {
-    font-size: 24px; /* Tablet: 24px */
+    text-transform: uppercase;
+  }
+  
+  .study-hours-description-title {
+    font-size: 32px;
+    top: 15%;
+    white-space: nowrap;
+  }
+
+  .study-hours-description-title::before {
+    top: 120%;
+  }
+
+  .study-hours-description-text {
+    max-width: 333px;
+  }
+
+  .carousel-slides {
+    height: 178px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .carousel-arrow {
+    width: 28px;
+    height: 28px;
+}
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-arrow-left {
+    left: 15px;
+  }
+
+  .carousel-arrow-right {
+    right: 15px;
+  }
+
+  .arrow-shape {
+    width: 14.933px;
+    height: 8.4px;
+  }
+
+  .arrow-left::before,
+  .arrow-left::after {
+    height: 10px;
+  }
+
+  .arrow-left::before {
+    top: 1px;
+    left: 8px;
+  }
+
+  .arrow-left::after {
+    top: 8px;
+    left: 8px;
+  }
+
+  .arrow-right::before,
+  .arrow-right::after {
+    height: 10px;
+  }
+
+  .arrow-right::before {
+    top: 1px;
+    left: 6px;
+  }
+
+  .arrow-right::after {
+    top: 8px;
+    left: 6px;
+  }
+
+
+}
+
+/* Tablet-specific styles */
+@media (min-width: 700px) {
+  .programs-subtitle {
+    font-size: 24px;
     text-transform: uppercase;
   }
 
   .study-hours-title {
-    font-size: 90px; /* Tablet: 90px */
-    white-space: nowrap; /* Prevents text from wrapping to multiple lines */
+    font-size: 90px;
+    white-space: nowrap;
   }
 
-  .study-hours-image-container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  .study-hours-description-title {
+    font-size: 36px;
+    top: 30%;
+    white-space: nowrap;
   }
 
-  .study-hours-image {
-    width: 100%;
-    max-width: none;
+  .study-hours-description-title::before {
+    top: 115%;
   }
+
+  .study-hours-description-text {
+    max-width: 705px;
+  }
+
+  .carousel-slides {
+    height: 364px;
+  }
+  
+  .dot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
 }
 
-/* Desktop styles */
+/* Desktop-specific styles */
 @media (min-width: 1024px) {
-  .study-hours-container {
-    padding: 0;
-    max-width: none;
-    width: 100%;
-    margin: 0;
-  }
-
-  .study-hours-header {
-    padding: 0;
-    width: 100%;
-    margin: 0;
-  }
-
   .programs-subtitle {
-    font-size: 32px; /* Desktop: 32px */
+    font-size: 32px;
     white-space: nowrap;
     letter-spacing: 3.84px;
     text-transform: none;
   }
 
   .study-hours-title {
-    font-size: 128px; /* Desktop: 128px */
-    white-space: nowrap; /* Prevents text from wrapping to multiple lines */
-  }
-
-  .study-hours-image-container {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    border-radius: 0;
+    font-size: 128px;
+    white-space: nowrap;
   }
 
   .study-hours-image {
-    width: 100%;
-    max-width: none;
     height: 792px;
     object-fit: cover;
     object-position: center;
   }
+
+  .study-hours-description-title {
+    font-size: 48px;
+    top: 30%;
+    white-space: nowrap;
+  }
+
+  .study-hours-description-title::before {
+    top: 110%;
+  }
+
+  .study-hours-description-title::after {
+    content: "Learning";
+    color: #FE9A00; /* Blue color for "Learning" */
+  }
+
+  .study-hours-description-text {
+    max-width: 732px;
+  }
+
+  .carousel-slides {
+    height: 684px;
+  }
+
+  .dot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
 }

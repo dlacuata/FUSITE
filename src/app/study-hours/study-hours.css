@@ -400,7 +400,7 @@ html, body {
   }
 
   .study-hours-description-title::before {
-    top: 100%;
+    top: 110%;
   }
 
   .study-hours-description-title::after {
@@ -409,6 +409,7 @@ html, body {
   }
 
   .study-hours-description-text {
+    top: 50%;
     max-width: 705px;
   }
 
@@ -471,7 +472,7 @@ html, body {
   }
 
   .study-hours-description-title::before {
-    top: 110%;
+    top: 125%;
   }
   
   .study-hours-description-title::after {
@@ -481,6 +482,7 @@ html, body {
   }
 
   .study-hours-description-text {
+    top: 50%;
     max-width: 732px;
   }
 

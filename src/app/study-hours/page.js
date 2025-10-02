@@ -137,7 +137,7 @@ export default function StudyHours() {
             <div className="study-hours-carousel">
                 <div className="carousel-container">
                     <div className="carousel-slides">
-                        <div className="carousel-slide showing">
+                        <div className="carousel-slide active">
                             <img src="/study-hours-carousel-1.png" alt="Study Hours 1" />
                         </div>
                         <div className="carousel-slide">

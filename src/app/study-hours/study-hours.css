@@ -95,7 +95,6 @@ html, body {
   pointer-events: none;
 }
 
-
 .study-hours-description {
   min-height: 100vh;
   width: 100%;
@@ -250,55 +249,20 @@ html, body {
 }
 
 .arrow-shape {
-  position: relative;
   width: 18.667px;
-  height: 10.5px;
+  height: 21px;
+  background-image: url('/arrow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.arrow-left::before,
-.arrow-left::after {
-  content: '';
-  position: absolute;
-  background-color: #ffffff;
-  width: 2px;
-  height: 12px;
+.arrow-left {
+  transform: rotate(180deg);
 }
 
-.arrow-left::before {
-  top: 2px;
-  left: 10px;
-  transform: rotate(45deg);
-  transform-origin: bottom center;
-}
-
-.arrow-left::after {
-  top: 10px;
-  left: 10px;
-  transform: rotate(-45deg);
-  transform-origin: top center;
-}
-
-.arrow-right::before,
-.arrow-right::after {
-  content: '';
-  position: absolute;
-  background-color: #ffffff;
-  width: 2px;
-  height: 12px;
-}
-
-.arrow-right::before {
-  top: 2px;
-  left: 8px;
-  transform: rotate(-45deg);
-  transform-origin: bottom center;
-}
-
-.arrow-right::after {
-  top: 10px;
-  left: 8px;
-  transform: rotate(45deg);
-  transform-origin: top center;
+.arrow-right {
+  transform: rotate(0deg);
 }
 
 
@@ -348,42 +312,6 @@ html, body {
   .carousel-arrow-right {
     right: 15px;
   }
-
-  .arrow-shape {
-    width: 14.933px;
-    height: 8.4px;
-  }
-
-  .arrow-left::before,
-  .arrow-left::after {
-    height: 10px;
-  }
-
-  .arrow-left::before {
-    top: 1px;
-    left: 8px;
-  }
-
-  .arrow-left::after {
-    top: 8px;
-    left: 8px;
-  }
-
-  .arrow-right::before,
-  .arrow-right::after {
-    height: 10px;
-  }
-
-  .arrow-right::before {
-    top: 1px;
-    left: 6px;
-  }
-
-  .arrow-right::after {
-    top: 8px;
-    left: 6px;
-  }
-
 
 }
 

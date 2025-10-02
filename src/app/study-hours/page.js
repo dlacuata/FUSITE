@@ -129,9 +129,9 @@ export default function StudyHours() {
       </div>
 
         <div className="study-hours-content">
-            <div className="study-hours-description">
-                <h1 className={`study-hours-description-title ${karla.variable}`}>Empower your </h1>
-                <p className={`study-hours-description-text ${inter.variable}`}>Join us for FUSION Study Hours, an ideal space for members to focus, collaborate, and make progress on their work or studies. Workshops are also held during Study Hours to enhance your skills and provide guidance on any struggles you may have. Whether you are aiming to finish an important project, prepare for an exam, or simply catch up on assignments, our supportive environment is designed to help you stay on track!</p> 
+            <div className="study-hours-description-container">
+              <h1 className={`study-hours-description-title ${karla.variable}`}>Empower your </h1>
+                  <p className={`study-hours-description-text ${inter.variable}`}>Join us for FUSION Study Hours, an ideal space for members to focus, collaborate, and make progress on their work or studies. Workshops are also held during Study Hours to enhance your skills and provide guidance on any struggles you may have. Whether you are aiming to finish an important project, prepare for an exam, or simply catch up on assignments, our supportive environment is designed to help you stay on track!</p> 
             </div>
             
             <div className="study-hours-carousel">
@@ -160,7 +160,14 @@ export default function StudyHours() {
                     </div>
                 </div>
             </div>
-            
+
+            <div className="text-sections-container">
+              <div className="first-section-container">
+                <h2 className={"yellow-subtitle ${karla.variable}"}>ACHIEVE {'>>'}</h2>
+              </div>
+             
+            </div>
+
         </div>
       
     </div>

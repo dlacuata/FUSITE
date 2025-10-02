@@ -17,19 +17,20 @@ html, body {
 /* Base styles - apply to all screen sizes */
 .study-hours-container {
   min-height: 100vh;
+  max-width: 100%;
   width: 100%;
   background-color: #ffff;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   position: relative;
 }
 
 .study-hours-header {
   background-color: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
+  max-width: 100%;
   width: 100%;
 }
 
@@ -46,7 +47,6 @@ html, body {
   text-align: center;
   z-index: 20;
   margin: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   white-space: nowrap;
 }
 
@@ -63,7 +63,6 @@ html, body {
   text-align: center;
   z-index: 10;
   margin: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   white-space: normal;
 }
 
@@ -74,7 +73,6 @@ html, body {
   max-width: 100%;
   border-radius: 0px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .study-hours-image {
@@ -95,13 +93,19 @@ html, body {
   pointer-events: none;
 }
 
-.study-hours-description {
-  min-height: 100vh;
+.study-hours-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.study-hours-description-container {
+  max-width: 100%;
   width: 100%;
   background-color: #fff;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   position: relative;
+  min-height: 0;
 }
 
 .study-hours-description-title {
@@ -134,7 +138,7 @@ html, body {
 
 .study-hours-description-text {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: var(--font-inter), sans-serif;
@@ -150,14 +154,17 @@ html, body {
 
 /* Carousel Styles */
 .study-hours-carousel {
+  max-width: 100%;
   width: 100%;
   background-color: #fff;
   transform: translateY(-50px);
+  margin: 0 auto;
 }
 
 .carousel-container {
+  max-width: 100%;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -265,21 +272,58 @@ html, body {
   transform: rotate(0deg);
 }
 
+.text-sections-container {
+  width: 100%;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.yellow-subtitle {
+  font-family: var(--font-karla), sans-serif;
+  font-weight: 700;
+  color: #FDC700;
+  text-align: left;
+  z-index: 10;
+}
 
 /* Mobile-specific styles */
-@media (min-width: 365px) {
+@media (min-width: 350px) {
+  
+  .study-hours-image-container {
+    height: 458px;
+  }
+
+  .study-hours-image {
+    height: 458px;
+  }
+
   .programs-subtitle {
     text-transform: uppercase;
+    bottom: 50%;
   }
   
+  .study-hours-description-container {
+    height: 656px;
+    max-width: 375px;
+  }
+  /* empower your *'*/
   .study-hours-description-title {
     font-size: 32px;
     top: 15%;
     white-space: nowrap;
+    line-height: 40px;
   }
-
+  /* yellow line */
   .study-hours-description-title::before {
     top: 120%;
+  }
+
+  /* learning */
+  .study-hours-description-title::after {
+    content: "\ALearning";
+    white-space: pre-line;
   }
 
   .study-hours-description-text {
@@ -313,6 +357,11 @@ html, body {
     right: 15px;
   }
 
+  .text-sections-container {
+    max-width: 375px;
+    max-height: 553px;
+  }
+
 }
 
 /* Tablet-specific styles */
@@ -320,6 +369,7 @@ html, body {
   .programs-subtitle {
     font-size: 24px;
     text-transform: uppercase;
+    bottom: 50%;
   }
 
   .study-hours-title {
@@ -327,14 +377,35 @@ html, body {
     white-space: nowrap;
   }
 
+  .study-hours-image-container {
+    height: 409px;
+  }
+
+  .study-hours-image {
+    height: 409px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .study-hours-description-container {
+    height: 525px;
+    max-width: 768px;
+  }
+  
   .study-hours-description-title {
     font-size: 36px;
-    top: 30%;
+    top: 25%;
     white-space: nowrap;
+    padding-bottom: 10px;
   }
 
   .study-hours-description-title::before {
-    top: 115%;
+    top: 100%;
+  }
+
+  .study-hours-description-title::after {
+    content: " Learning" !important;
+    white-space: nowrap !important;
   }
 
   .study-hours-description-text {
@@ -355,10 +426,14 @@ html, body {
     height: 36px;
   }
 
+  .text-sections-container { 
+    max-width: 768px;
+    max-height: 360px;
+  }
 }
 
 /* Desktop-specific styles */
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   .programs-subtitle {
     font-size: 32px;
     white-space: nowrap;
@@ -371,10 +446,22 @@ html, body {
     white-space: nowrap;
   }
 
+  .study-hours-image-container {
+    height: 792px;
+  }
+
   .study-hours-image {
     height: 792px;
     object-fit: cover;
     object-position: center;
+  }
+
+
+  .study-hours-description-container {
+    height: 700px !important;
+    min-height: 700px !important;
+    max-height: 700px !important;
+    max-width: 1440px;
   }
 
   .study-hours-description-title {
@@ -386,10 +473,11 @@ html, body {
   .study-hours-description-title::before {
     top: 110%;
   }
-
+  
   .study-hours-description-title::after {
-    content: "Learning";
-    color: #FE9A00; /* Blue color for "Learning" */
+    content: " Learning";
+    color: #FE9A00;
+    white-space: normal;
   }
 
   .study-hours-description-text {
@@ -410,4 +498,8 @@ html, body {
     height: 40px;
   }
 
+  .text-sections-container {
+    max-width: 1440px;
+    max-height: 531px;
+  }
 }

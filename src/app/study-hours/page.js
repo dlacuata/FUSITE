@@ -162,8 +162,15 @@ export default function StudyHours() {
             </div>
 
             <div className="text-sections-container">
+              
               <div className="first-section-container">
-                <h2 className={"yellow-subtitle ${karla.variable}"}>ACHIEVE {'>>'}</h2>
+                <div className="first-info-container">
+                  <h2 className={`yellow-subtitle ${karla.variable}`}>ACHIEVE {'>>'}</h2>
+                  <h1 className={`title ${karla.variable}`}>Earn Big</h1>
+                  <p className={`description ${inter.variable}`}>Join Study Hours, collect stamps, and earn rewards! Every session adds to your loyalty card, which you can trade in for prizes like stickers, keychains, and more!</p>
+                </div>
+                
+                
               </div>
              
             </div>

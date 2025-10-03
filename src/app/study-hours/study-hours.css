@@ -92,10 +92,15 @@ html, body {
   opacity: 0.7;
   pointer-events: none;
 }
+/* end of image/header styling */
 
+/* start of content styling */
+/* carousel content styling */
 .study-hours-content {
   width: 100%;
   max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .study-hours-description-container {
@@ -103,7 +108,7 @@ html, body {
   width: 100%;
   background-color: #fff;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   position: relative;
   min-height: 0;
 }
@@ -158,13 +163,15 @@ html, body {
   width: 100%;
   background-color: #fff;
   transform: translateY(-50px);
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 
 .carousel-container {
   max-width: 100%;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   position: relative;
 }
 
@@ -271,13 +278,37 @@ html, body {
 .arrow-right {
   transform: rotate(0deg);
 }
+/*end of carousel content styling */
 
+/* start of info section 1/3 */
+/* text sections container */
 .text-sections-container {
   width: 100%;
-  background-color: #fff;
+  max-width: 100%;
+  margin: -50px 0 0 0;
   padding: 0;
+}
+
+/* gradient */
+.first-section-container {
+  width: 100%;
+  max-width: 100%;
+  background: linear-gradient(90deg, var(--colors-orange-050, #FFF8F1) 60.79%, var(--colors-amber-500, #FE9A00) 109.4%);
+  padding: 100px 60px;
   margin: 0;
   position: relative;
+  min-height: 531px;
+}
+
+.first-info-container { 
+  width: 100%;
+  max-width: 311px;
+  max-height: 153px;
+  margin: 0;
+  padding: 20px;
+  background-color: #ff0000;
+  position: relative;
+  display: block;
 }
 
 .yellow-subtitle {
@@ -286,6 +317,42 @@ html, body {
   color: #FDC700;
   text-align: left;
   z-index: 10;
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+}
+
+.title {
+  font-family: var(--font-karla), 'Karla', sans-serif;
+  font-weight: 700;
+  color: #111928;
+  font-size: 20px;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  display: block;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background-color: #FDC700;
+}
+
+.description {
+  font-family: var(--font-inter), sans-serif;
+  color: #3C3C3C;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 500px;
+  display: block;
 }
 
 /* Mobile-specific styles */
@@ -357,9 +424,20 @@ html, body {
     right: 15px;
   }
 
-  .text-sections-container {
-    max-width: 375px;
-    max-height: 553px;
+  .first-section-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .first-info-container {
+    width: 100%;
+    max-width: 100%;
+    max-width: 311px;
+    max-height: 153px;
+    margin: 0;
+    padding: 0;
   }
 
 }
@@ -427,9 +505,31 @@ html, body {
     height: 36px;
   }
 
-  .text-sections-container { 
-    max-width: 768px;
-    max-height: 360px;
+  .first-section-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .first-info-container {
+    width: 100%;
+    max-width: 100%;
+    max-width: 352px;
+    max-height: 153px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .description {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
   }
 }
 
@@ -500,8 +600,32 @@ html, body {
     height: 40px;
   }
 
-  .text-sections-container {
-    max-width: 1440px;
-    max-height: 531px;
+  .first-section-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
   }
+
+  .first-info-container { 
+    width: 100%;
+    max-width: 100%;
+    max-width: 576px;
+    max-height: 227px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .title {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  .description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.0;
+  }
+  
+  
 }

@@ -1,103 +1,147 @@
+import { Karla } from "next/font/google";
+import { Inter } from "next/font/google";
+import CardComponent from "./card";
+import Testimonial from "./testimonial";
+import Carousel from "./carousel.js"
 import Image from "next/image";
+
+const karla = Karla({
+  weight: ["700"],
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <div className="flex flex-col items-center 
+                      md:justify-center  
+                      lg:h-[50vh] md:h-[457px] h-[329px]
+                      lg:pr-[354px] md:pr-[32px] pr-[16px]
+                      lg:pl-[354px] md:pl-[32px] pl-[16px]">
+        <div className={karla.className}>
+          <div className="md:text-[5vh] text-xl text-center">Intern with FUSION!</div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <div className="w-25 h-1 bg-amber-500 sm:my-4 my-1"></div>
+
+        <div className={inter.className}>
+          <div className="h-[160px] xl:text-[2vh] text-base text-intern text-center md:w-[79vh] sm:w-[400px] w-[335px]">
+            Our 10-week internship program enables interns to shadow three board positions of their 
+            choice. The first six weeks involve rotating through these roles, followed by a focus on one 
+            preferred position during the final four weeks, culminating in an intern-led general meeting in 
+            the last week. Interns are expected to attend both general meetings and board meetings 
+            throughout the program.
+          </div>
+        </div>
+      </div>
+      
+      <div className="relative flex flex-col items-center 
+                      lg:p-[0px] md:p-[32px] p-[16px]
+                      lg:pt-[80px]
+                      lg:h-[78vh] md:h-[575px] h-[513]
+                      bg-gradient-to-b from-[#FFA523]/20 via-[#FACA84]/20 to-[#FFA523]/20">
+        <Image
+          src="/internbackground.png"
+          alt="Intern Background"
+          fill
+          className="object-cover -z-10 opacity-10"
+        />
+        <div className="absolute inset-0 -z-0"></div>
+        <div className={karla.className}>
+          <div className="md:text-[3.3vh] text-xl">INTERN DUTIES</div>
+        </div>
+        <div className="w-25 h-1 my-[5px] bg-amber-500"></div>
+        <div className="flex items-center justify-center
+                      md:flex-row flex-col
+                      lg:gap-[2vw] md:gap-[30x] gap-[26px]     
+                      lg:w-[81vw] md:w-[704px] w-[343px]">
+          {/* put somethin in the imageSrc prop for the card components to add an image*/}
+          <CardComponent
+            imageSrc="/gear.png"
+            heading="Support"
+            description="Attend all general meetings and
+                        board meetings, and often be
+                        present at various FUSION-related events."
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <CardComponent
+            imageSrc="/gearsun.png"
+            heading="Innovate"
+            description="Contribute to the work of each chosen position and create an event during the final week to present your acquired skills. "
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <CardComponent
+            imageSrc="/sun.png"
+            heading="Organize"
+            description="Plan the intern-led week, organizing and leading a general meeting and other programs with your intern class."
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        </div>
+      </div>
+      <div className="relative flex flex-col items-center 
+                      lg:py-[60px] md:py-[40px] py-[20px]
+                      lg:px-[354px] md:px-[32px] px-[16px]
+                      lg:h-[161vh] md:h-[1195px] h-[592px]
+                      bg-linear-to-b from-white to-[#737373]">
+        <div className="flex flex-col items-center
+                        lg:w-[76vw] md:w-[704px] w-[343px]
+                        lg:h-[1198px] md:h-[771px] h-[466px]
+                        lg:gap-[40px] md:gap-[36px] gap-[22px]">
+          <div className="hidden md:block">
+            <Image
+              src="/rectangle.png"
+              alt="Background Accent"
+              width={400}
+              height={400}
+              className="absolute left-0 top-[56px] w-[45vh]"
+            />
+          </div>
+          <Image
+            src="/rectangle2.png"
+            alt="Background Accent"
+            width={400}
+            height={400}
+            className="absolute right-0 bottom-0 w-[45vh]"
+          />
+          <div className={karla.className}>
+            <div className="md:text-[3.4vh] text-xl"><span className="text-[#FFA523]">Why</span> Intern for FUSION?</div>
+          </div>
+          <div className="hidden md:flex flex-col lg:gap-[40px] md:gap-[36px] gap-[22px]">
+            <Testimonial
+              imageSrc="/marissa.jpg"
+              name="Marissa Caguiloa"
+              internClass="FU Class"
+              description="“The FUSION internship revived my love for leadership. I was able to connect with 
+                            others while working toward a common goal, let my creativity fly, and see the impact 
+                            of my voice and ideas.”"
+            />
+            <Testimonial
+              imageSrc="/tristan.jpg"
+              name="Tristan Dela Cruz"
+              internClass="ON Class"
+              description="“It was one of my favorite experiences I’ve ever had in college. It opened up my 
+                            professional and social communities and built me skills that I’ve translated to other 
+                            opportunities. I can proudly say that ON Class has a special place in my heart 
+                            throughout college and after I graduate.”"
+              direction="row-reverse"
+            />
+            <Testimonial
+              imageSrc="/alecs.png"
+              name="Alecs Garcia"
+              internClass="SI Class"
+              description="“Interning under Motherboard as a SI class intern was an invaluable experience 
+                            during my short time at UCI! Shadowing board members and assisting in their tasks 
+                            helped me navigate the transition from ideas to execution in a fun and low-stakes 
+                            environment. In addition, collaborating with other SI interns helped me appreciate 
+                            the dedication that went into growing and maintaining the wonderful space that 
+                            FUSION occupies.”"
+            />
+          </div>
+          <div className="md:hidden flex z-10"><Carousel/></div>
+        </div>
+      </div>
     </div>
   );
 }

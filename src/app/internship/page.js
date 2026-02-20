@@ -1,8 +1,8 @@
 import { Karla } from "next/font/google";
 import { Inter } from "next/font/google";
 import CardComponent from "./card";
-import Testimonial from "./testimonial";
 import Carousel from "./carousel.js"
+import Testimonial from "@/components/Testimonial";
 import Image from "next/image";
 
 const karla = Karla({

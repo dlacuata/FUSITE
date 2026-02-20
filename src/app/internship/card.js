@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardBody } from '@chakra-ui/react';
 import Image from "next/image";
 import { Livvic } from "next/font/google";
@@ -20,15 +22,12 @@ export default function CardComponent({ imageSrc = "/placeholder.png", heading, 
                       lg:h-[50vh] md:h-[400px] h-[128px]
                       lg:pt-[40px] md:pt-[40px]
                       '>
-                    <div className='flex h-[15vh] bg-white rounded-tl-2xl'>
+                    <div className='relative w-[15vh] h-[15vh] flex-shrink-0 md:mx-auto'>
                         <Image
                             src={imageSrc}
-                            alt="Board Meeting"
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            style={{ width: "100%", height: "auto" }}
-                            className='rounded-full'
+                            alt={heading}
+                            fill
+                            className='object-contain'
                         />
                     </div>
                     

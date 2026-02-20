@@ -1,3 +1,5 @@
+"use client"
+
 import { Image, Card, Stack, Text, CardFooter, CardBody } from '@chakra-ui/react';
 import { Inter } from "next/font/google";
 

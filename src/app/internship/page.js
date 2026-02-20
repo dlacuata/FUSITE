@@ -4,7 +4,6 @@ import CardComponent from "./card";
 import Carousel from "./carousel.js"
 import Testimonial from "@/components/Testimonial";
 import Image from "next/image";
-import Testimonial from "./testimonial";
 
 const karla = Karla({
   weight: ["700"],

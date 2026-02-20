@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div>
@@ -135,7 +133,7 @@ export default function Home() {
             mentorship to internship, allowing members to gain immensely diverse
             experience all in one place. Utilizing and honoring all five of our
             pillars, FUSION ensures that all members are able to continuously
-            build on their academic, professional, and even social developments.
+            build on their academic, professional, and social developments.
           </p>
           <button className=" w-[130px] h-[40px] self-center md:self-start font-medium bg-[#1447E6] pt-2.5 pr-4 pb-2.5 pl-4 gap-1.5 rounded-xl text-center text-white">
             Learn More &gt;{" "}
